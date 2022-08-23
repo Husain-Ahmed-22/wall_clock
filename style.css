@@ -1,0 +1,210 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: roboto;
+}
+
+.background{
+  width: 100%;
+  height: 100vh;
+  background: #ADB3FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone{
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  max-height: 900px;
+  background: #F5F6FF;
+  transition: .3s;
+}
+
+.wrapper{
+  width: 300px;
+  margin: auto;
+}
+
+.themebtn{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  background-clip: content-box;
+  margin-top: 150px;
+  margin-left: auto;
+  border: none;
+  position: relative;
+}
+
+.themebtn *{
+ width: 100%;
+ position: absolute;
+ transition: .3s;
+}
+
+.themebtn .moon{
+  color: #000000DE;
+}
+
+.themebtn .sun{
+  opacity: 0;
+  color: #fff;
+}
+
+.analog{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+            -10px -10px 10px #FFF, 
+            10px  10px 10px #DBDBDB73,
+            inset -10px -10px 10px #FFF,
+            inset 10px 10px 10px #DBDBDB73;
+  position: relative;  
+  transition: .3s;
+}
+
+.analog_stiks{
+  /* background-image: linear-gradient(90deg, #7C91FF 50%, #A6A9FF 50%); */
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.analog_stiks span{
+  display: block;
+}
+
+.analog_stiks > span{
+  height: 100%;
+  position: absolute;
+}
+
+.analog_stiks > span span{
+  background: #000000DE;
+}
+
+.analog_stiks .circle{
+  width: 10px;
+  height: 10px;
+  background: #6A4EFF;
+  border: 2px solid #F5F6FF;
+  z-index: 9;
+  border-radius: 50%;
+  align-self: center;
+  transition: .3s;
+}
+
+.time_quarter{
+  opacity: .1;
+}
+
+.time_quarter:nth-child(1),
+.time_quarter:nth-child(4),
+.time_quarter:nth-child(7),
+.time_quarter:nth-child(10){
+  opacity: 1;
+}
+
+.time_quarter span{
+  width: 3px;
+  height: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.hour_hand span{
+  width: 5px;
+  height: 70px;
+  border-radius: 5px;
+  margin-top: 82.5px;
+}
+
+.minute_hand span{
+  width: 5px;
+  height: 90px;
+  border-radius: 5px;
+  margin-top: 62.5px;
+}
+
+
+.second_hand span{
+  width: 3px;
+  height: 120px;
+  background: #6A4EFF !important;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+
+.digital{
+  width: 170px;
+  height: 70px;
+  margin: 70px auto 0px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  font-size: 60px;
+  color: #000000DE;
+}
+
+.ampm{
+  font-size: 14px;
+  align-self: flex-start;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.date{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  color: #000000DE;
+}
+
+.author{
+  display: none;
+}
+
+
+
+.dark .phone{
+  background: #000000DE;
+}
+
+.dark .themebtn .moon{
+  opacity: 0;
+}
+.dark .themebtn .sun{
+  opacity: 1;
+}
+
+.dark .analog{
+  box-shadow:
+            -10px -10px 10px #FFFFFF07, 
+            10px  10px 10px #00000077,
+            inset -10px -10px 10px #FFFFFF07,
+            inset 10px 10px 10px #00000077;
+}
+
+.dark .analog_stiks .circle{
+  border: 2px solid #000000DE;
+}
+
+.dark .time_quarter span,
+.dark .hour_hand span,
+.dark .minute_hand span{
+  background: #B9BBD1;
+  background: #EBEDFF;
+}
+
+.dark .digital,
+.dark .date{
+  color: #EBEDFF;
+}
